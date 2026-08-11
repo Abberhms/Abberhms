@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sulaiman-muhammad.dev/sitemap.xml

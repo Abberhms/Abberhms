@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" fill="none">
+  <rect width="600" height="600" rx="32" fill="url(#bg-grad)"/>
+  <circle cx="300" cy="220" r="100" fill="url(#avatar-grad)"/>
+  <path d="M160 480C160 391.634 222.68 320 300 320C377.32 320 440 391.634 440 480V500H160V480Z" fill="url(#avatar-grad)"/>
+  <rect x="230" y="195" width="140" height="50" rx="8" fill="#ffffff" fill-opacity="0.15"/>
+  <text x="300" y="230" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">SAM</text>
+  <text x="300" y="550" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#94A3B8" text-anchor="middle">Sulaiman Abba Muhammad</text>
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="600" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="avatar-grad" x1="160" y1="120" x2="440" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0284C7"/>
+      <stop offset="1" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+</svg>
