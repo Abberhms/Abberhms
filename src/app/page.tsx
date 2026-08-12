@@ -1,12 +1,9 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
-import { Skills } from "@/components/skills";
-import { Experience } from "@/components/experience";
 import { Projects } from "@/components/projects";
-import { Education } from "@/components/education";
-import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { AboutCTA } from "@/components/about-cta";
 
 export default function Home() {
   return (
@@ -19,23 +16,11 @@ export default function Home() {
         {/* 2. Hero Section */}
         <Hero />
 
-        {/* 3. About Section */}
-        <About />
-
-        {/* 4. Skills Section */}
-        <Skills />
-
-        {/* 5. Experience Section */}
-        <Experience />
-
-        {/* 6. Projects Section */}
+        {/* 5. Projects Section */}
         <Projects />
 
-        {/* 7. Education Section */}
-        <Education />
-
-        {/* 8. Contact Section */}
-        <Contact />
+        {/* 6. CTA */}
+        <AboutCTA />
       </main>
 
       {/* 9. Minimal Footer */}

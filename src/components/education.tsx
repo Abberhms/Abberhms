@@ -1,7 +1,13 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
-import { GraduationCap, Award, ShieldCheck, Calendar, BookOpen } from "lucide-react";
+import {
+  GraduationCap,
+  Award,
+  ShieldCheck,
+  Calendar,
+  BookOpen,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Education() {
@@ -23,7 +29,8 @@ export function Education() {
           {/* Main Academic Degrees (7 cols on lg) */}
           <div className="lg:col-span-7 space-y-6">
             <h3 className="text-xs font-mono font-bold tracking-wider uppercase text-slate-400 dark:text-slate-500 mb-4 flex items-center gap-2">
-              <GraduationCap className="w-4 h-4 text-sky-500" /> Academic Degrees
+              <GraduationCap className="w-4 h-4 text-sky-500" /> Academic
+              Degrees
             </h3>
 
             {siteConfig.education.map((edu, idx) => (
@@ -68,7 +75,8 @@ export function Education() {
             {/* Trainings & Certifications */}
             <div>
               <h3 className="text-xs font-mono font-bold tracking-wider uppercase text-slate-400 dark:text-slate-500 mb-4 flex items-center gap-2">
-                <Award className="w-4 h-4 text-teal-500" /> Trainings &amp; Certifications
+                <Award className="w-4 h-4 text-teal-500" /> Trainings &amp;
+                Certifications
               </h3>
               <div className="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/70 border border-slate-200/80 dark:border-slate-800/80 backdrop-blur-xs space-y-3">
                 {siteConfig.trainings.map((item, tIdx) => (
@@ -86,7 +94,8 @@ export function Education() {
             {/* Professional Memberships */}
             <div>
               <h3 className="text-xs font-mono font-bold tracking-wider uppercase text-slate-400 dark:text-slate-500 mb-4 flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-indigo-500" /> Professional Bodies
+                <ShieldCheck className="w-4 h-4 text-indigo-500" /> Professional
+                Bodies
               </h3>
               <div className="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/70 border border-slate-200/80 dark:border-slate-800/80 backdrop-blur-xs space-y-3">
                 {siteConfig.memberships.map((mem, mIdx) => (

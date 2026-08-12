@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu, X, Code } from "lucide-react";
@@ -10,6 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +37,7 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link
-          href="#"
+          href="/"
           className="group flex items-center gap-2 font-bold text-lg text-slate-900 dark:text-slate-100 tracking-tight focus:outline-none"
         >
           <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-sky-600 to-teal-500 flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform duration-200">
@@ -50,7 +52,11 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="px-3 py-1.5 text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 rounded-full transition-colors duration-150"
+              className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors duration-150 ${
+                pathname === link.href
+                  ? "bg-sky-500/10 text-sky-600 dark:bg-sky-400/10 dark:text-sky-400"
+                  : "text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400"
+              }`}
             >
               {link.name}
             </Link>

@@ -4,7 +4,13 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { PortfolioImage } from "@/components/portfolio-image";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
-import { ArrowRight, MapPin, Terminal, Smartphone, Monitor } from "lucide-react";
+import {
+  ArrowRight,
+  MapPin,
+  Terminal,
+  Smartphone,
+  Monitor,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Hero() {
@@ -46,10 +52,12 @@ export function Hero() {
             {/* Quick Tech Badge Row */}
             <div className="flex flex-wrap gap-2 mb-8 text-xs font-mono text-slate-500 dark:text-slate-400">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
-                <Monitor className="w-3.5 h-3.5 text-sky-500" /> React &amp; Next.js
+                <Monitor className="w-3.5 h-3.5 text-sky-500" /> React &amp;
+                Next.js
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
-                <Smartphone className="w-3.5 h-3.5 text-teal-500" /> React Native &amp; Expo
+                <Smartphone className="w-3.5 h-3.5 text-teal-500" /> React
+                Native &amp; Expo
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
                 <MapPin className="w-3.5 h-3.5 text-indigo-500" /> Kano, Nigeria
@@ -59,7 +67,7 @@ export function Hero() {
             {/* CTA Buttons & Social Icons */}
             <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
               <Link
-                href="#projects"
+                href="/projects"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-500 hover:to-teal-500 text-white font-medium text-sm shadow-md shadow-sky-600/20 hover:shadow-lg hover:shadow-sky-600/30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500"
               >
                 View Projects
@@ -67,7 +75,7 @@ export function Hero() {
               </Link>
 
               <Link
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-medium text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-500"
               >
                 Let&apos;s Connect
