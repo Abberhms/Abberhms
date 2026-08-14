@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 export function Education() {
   return (
-    <section id="education" className="py-24 relative">
+    <section id="education" className="py-10 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col items-start mb-16">

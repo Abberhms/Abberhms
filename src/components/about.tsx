@@ -2,12 +2,19 @@
 
 import { siteConfig } from "@/config/site";
 import { PortfolioImage } from "@/components/portfolio-image";
-import { CheckCircle2, ShieldCheck, Zap, Layers, Globe, Smartphone } from "lucide-react";
+import {
+  CheckCircle2,
+  ShieldCheck,
+  Zap,
+  Layers,
+  Globe,
+  Smartphone,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 export function About() {
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-10 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col items-start mb-12">
@@ -51,7 +58,10 @@ export function About() {
             className="lg:col-span-7 flex flex-col items-start"
           >
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-              I am a Software Engineer based in Kano, Nigeria, dedicated to crafting high-performance, responsive web applications and cross-platform mobile solutions. My approach blends rigorous software engineering principles with intuitive UI implementation.
+              I am a Software Engineer based in Kano, Nigeria, dedicated to
+              crafting high-performance, responsive web applications and
+              cross-platform mobile solutions. My approach blends rigorous
+              software engineering principles with intuitive UI implementation.
             </p>
 
             {/* Specialized Competencies List */}

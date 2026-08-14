@@ -22,7 +22,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 bg-slate-100/40 dark:bg-slate-900/30 relative"
+      className="py-10 bg-slate-100/40 dark:bg-slate-900/30 relative"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

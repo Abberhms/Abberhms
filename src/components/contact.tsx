@@ -25,8 +25,9 @@ export function Contact() {
   >("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (
       !formData.name.trim() ||
       !formData.email.trim() ||
@@ -44,17 +45,45 @@ export function Contact() {
     }
 
     setStatus("submitting");
-    // Simulate form submission for frontend contact form
-    setTimeout(() => {
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("https://formspree.io/f/mzepgdve", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message.");
+      }
+
       setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-    }, 1000);
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+      setErrorMessage(
+        "Something went wrong while sending your message. Please try again.",
+      );
+    }
   };
 
   return (
     <section
       id="contact"
-      className="py-24 relative bg-slate-100/40 dark:bg-slate-900/30"
+      className="py-30 relative bg-slate-100/40 dark:bg-slate-900/30"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -200,6 +229,7 @@ export function Contact() {
                 <input
                   type="text"
                   id="contact-name"
+                  name="name"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -221,6 +251,7 @@ export function Contact() {
                 <input
                   type="email"
                   id="contact-email"
+                  name="email"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -241,6 +272,7 @@ export function Contact() {
                 </label>
                 <textarea
                   id="contact-message"
+                  name="message"
                   rows={5}
                   value={formData.message}
                   onChange={(e) =>

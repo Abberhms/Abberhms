@@ -1,13 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
-import {
-  Code2,
-  Smartphone,
-  Cpu,
-  Database,
-  Wrench,
-} from "lucide-react";
+import { Code2, Smartphone, Cpu, Database, Wrench } from "lucide-react";
 import { motion } from "framer-motion";
 
 const categoryIcons = {
@@ -20,7 +14,10 @@ const categoryIcons = {
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 relative bg-slate-100/40 dark:bg-slate-900/30">
+    <section
+      id="skills"
+      className="py-10 relative bg-slate-100/40 dark:bg-slate-900/30"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col items-start mb-16">

@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export function AboutHero() {
   return (
-    <section className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 overflow-hidden bg-grid-pattern">
+    <section className="relative pt-32 pb-8 sm:pt-36 sm:pb-24 overflow-hidden bg-grid-pattern">
       {/* Subtle ambient background */}
       <div className="absolute top-20 right-0 w-[400px] h-[400px] rounded-full bg-sky-500/5 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-teal-500/5 blur-3xl pointer-events-none" />

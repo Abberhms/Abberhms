@@ -41,7 +41,7 @@ export function Navbar() {
           className="group flex items-center gap-2 font-bold text-lg text-slate-900 dark:text-slate-100 tracking-tight focus:outline-none"
         >
           <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-sky-600 to-teal-500 flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform duration-200">
-            <Code className="w-4 h-4" />
+            <img className="w-5 h-5" src="/icon.png" alt="Icon" />
           </span>
           <span className="font-mono">{siteConfig.shortName}</span>
         </Link>
